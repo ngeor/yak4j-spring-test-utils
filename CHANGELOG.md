@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Updated ${spring.version} from 5.3.13 to 5.3.15
 - Updating parent from 2.1.0 to 2.4.0
 - Updating parent from 2.4.0 to 3.1.1
+- Update dependency org.hamcrest:hamcrest-core to v2
 
 ## [0.21.1] - 2022-01-27
 
