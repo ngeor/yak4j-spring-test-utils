@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.github.ngeor</groupId>
     <artifactId>java</artifactId>
-    <version>3.3.0</version>
+    <version>3.4.0</version>
   </parent>
   <artifactId>yak4j-spring-test-utils</artifactId>
   <version>0.22.0-SNAPSHOT</version>
