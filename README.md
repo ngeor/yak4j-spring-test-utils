@@ -2,13 +2,9 @@
 
 Testing utilities for Spring
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.ngeor/yak4j-spring-test-utils.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.ngeor%22%20AND%20a:%22yak4j-spring-test-utils%22)
-[![Java CI with Maven](https://github.com/ngeor/yak4j-spring-test-utils/actions/workflows/maven.yml/badge.svg)](https://github.com/ngeor/yak4j-spring-test-utils/actions/workflows/maven.yml)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.ngeor/yak4j-spring-test-utils.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/com.github.ngeor/yak4j-spring-test-utils)
+[![build](https://github.com/ngeor/yak4j-spring-test-utils/actions/workflows/build.yml/badge.svg)](https://github.com/ngeor/yak4j-spring-test-utils/actions/workflows/build.yml)
 [![javadoc](https://javadoc.io/badge2/com.github.ngeor/yak4j-spring-test-utils/javadoc.svg)](https://javadoc.io/doc/com.github.ngeor/yak4j-spring-test-utils)
-
-**Archived project!**
-This project is **archived** and will be **removed**.
-It has moved [here](https://github.com/ngeor/kamino/tree/master/libs/yak4j-spring-test-utils).
 
 ## Overview
 

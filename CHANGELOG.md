@@ -1,14 +1,35 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [0.22.0](https://github.com/ngeor/kamino/compare/libs/yak4j-spring-test-utils/v0.21.2...libs/yak4j-spring-test-utils/v0.22.0) - 2024-02-27
+
+### Fixes
+
+* Upgrading libraries to Java 17
 
 ### Miscellaneous Tasks
 
-- Updated copyright year in LICENSE
-- Updated ${spring.version} from 5.3.13 to 5.3.15
-- Updating parent from 2.1.0 to 2.4.0
-- Updating parent from 2.4.0 to 3.1.1
+* Delete old .github and scripts folders
+* Keeping only root .editorconfig, deleting the rest
+* Keeping only root .gitignore, deleting the rest
+* Upgrade to latest parent pom
+* Upgraded to latest parent pom
+* Use `com.github.ngeor:java` as the parent pom everywhere
+* Switch to snapshot version of parent pom
+* Remove unnecessary mock
+
+### Dependencies
+
+* Upgraded parent pom
+* Upgrade to Spring 5.3.32
+
+## [0.21.2] - 2024-01-28
+
+### Miscellaneous Tasks
+
+* Add 'libs/yak4j-spring-test-utils/' from commit '2fc88efae07f5ccf4657707fd4331a3cb5154631'
+* Adjusted imported code
 
 ## [0.21.1] - 2022-01-27
 

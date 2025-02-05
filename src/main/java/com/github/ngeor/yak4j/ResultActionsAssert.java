@@ -1,5 +1,9 @@
 package com.github.ngeor.yak4j;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.Arrays;
+import java.util.List;
 import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.api.Assertions;
 import org.springframework.http.HttpStatus;
@@ -9,11 +13,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
-
-import java.util.Arrays;
-import java.util.List;
-
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
  * Assertion DSL for {@link ResultActions}.
@@ -48,22 +47,22 @@ public final class ResultActionsAssert extends AbstractAssert<ResultActionsAsser
 
         BindingResult bindingResult = e.getBindingResult();
         Assertions.assertThat(bindingResult)
-            .withFailMessage("Expecting not null binding result in resolved exception")
-            .isNotNull();
+                .withFailMessage("Expecting not null binding result in resolved exception")
+                .isNotNull();
 
         List<ObjectError> allErrors = bindingResult.getAllErrors();
         Assertions.assertThat(allErrors)
-            .withFailMessage("Expecting exactly %d errors in: %s", invalidFieldExpectations.length, allErrors)
-            .isNotNull()
-            .hasSize(invalidFieldExpectations.length);
+                .withFailMessage("Expecting exactly %d errors in: %s", invalidFieldExpectations.length, allErrors)
+                .isNotNull()
+                .hasSize(invalidFieldExpectations.length);
 
         for (InvalidFieldExpectation invalidFieldExpectation : invalidFieldExpectations) {
             String field = invalidFieldExpectation.getField();
             String code = invalidFieldExpectation.getCode();
 
             Assertions.assertThat(allErrors)
-                .withFailMessage("Expecting field %s with code %s in: %s", field, code, allErrors)
-                .anyMatch(err -> isExpectedField(err, field, code));
+                    .withFailMessage("Expecting field %s with code %s in: %s", field, code, allErrors)
+                    .anyMatch(err -> isExpectedField(err, field, code));
         }
 
         return this;
@@ -80,8 +79,7 @@ public final class ResultActionsAssert extends AbstractAssert<ResultActionsAsser
     }
 
     public ResultActionsAssert isBadRequest(InvalidFieldExpectation... invalidFieldExpectations) throws Exception {
-        return isBadRequest()
-            .containsValidationErrorsExactly(invalidFieldExpectations);
+        return isBadRequest().containsValidationErrorsExactly(invalidFieldExpectations);
     }
 
     public ResultActionsAssert isConflict() throws Exception {
@@ -129,9 +127,10 @@ public final class ResultActionsAssert extends AbstractAssert<ResultActionsAsser
     public ResultActionsAssert resolvedExceptionIsInstanceOf(Class<? extends Exception> exceptionClass) {
         Exception resolvedException = actual.andReturn().getResolvedException();
         Assertions.assertThat(resolvedException)
-            .withFailMessage("Expecting resolved exception to be instance of %s: %s", exceptionClass, resolvedException)
-            .isNotNull()
-            .isInstanceOf(exceptionClass);
+                .withFailMessage(
+                        "Expecting resolved exception to be instance of %s: %s", exceptionClass, resolvedException)
+                .isNotNull()
+                .isInstanceOf(exceptionClass);
         return this;
     }
 

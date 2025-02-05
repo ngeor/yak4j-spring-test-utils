@@ -9,8 +9,7 @@ import org.springframework.test.web.servlet.ResultActions;
  */
 @SuppressWarnings("WeakerAccess")
 public final class Assertions {
-    private Assertions() {
-    }
+    private Assertions() {}
 
     /**
      * Starts building assertions for the given result actions.

@@ -1,11 +1,10 @@
 package com.github.ngeor.yak4j;
 
+import java.util.function.Consumer;
 import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.api.Assertions;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-
-import java.util.function.Consumer;
 
 /**
  * Assertion DSL for {@link ResponseEntity}.
@@ -28,9 +27,9 @@ public class ResponseEntityAssert<T> extends AbstractAssert<ResponseEntityAssert
         isNotNull();
         T actualBody = actual.getBody();
         Assertions.assertThat(actualBody)
-            .withFailMessage("Expecting response entity body to be %s but was %s", body, actualBody)
-            .isNotNull()
-            .isEqualTo(body);
+                .withFailMessage("Expecting response entity body to be %s but was %s", body, actualBody)
+                .isNotNull()
+                .isEqualTo(body);
         return this;
     }
 
@@ -63,8 +62,8 @@ public class ResponseEntityAssert<T> extends AbstractAssert<ResponseEntityAssert
         isNotNull();
         T actualBody = actual.getBody();
         Assertions.assertThat(actualBody)
-            .withFailMessage("Expecting response entity body to not be null")
-            .isNotNull();
+                .withFailMessage("Expecting response entity body to not be null")
+                .isNotNull();
         return this;
     }
 
@@ -78,8 +77,8 @@ public class ResponseEntityAssert<T> extends AbstractAssert<ResponseEntityAssert
         isNotNull();
         HttpStatus actualStatusCode = actual.getStatusCode();
         Assertions.assertThat(actualStatusCode)
-            .withFailMessage("Expecting response status code to be %s but was %s", httpStatus, actualStatusCode)
-            .isEqualTo(httpStatus);
+                .withFailMessage("Expecting response status code to be %s but was %s", httpStatus, actualStatusCode)
+                .isEqualTo(httpStatus);
         return this;
     }
 
