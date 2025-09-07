@@ -11,3 +11,6 @@ max_line_length = 120
 
 [*.sh]
 end_of_line = lf
+
+[*.xml]
+indent_size = 2

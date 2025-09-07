@@ -65,7 +65,7 @@ def perform_release(gpg_key, gpg_passphrase, maven_username, maven_password):
 <settings>
     <servers>
         <server>
-            <id>ossrh</id>
+            <id>central</id>
             <username>{maven_username}</username>
             <password>{maven_password}</password>
         </server>

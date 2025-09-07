@@ -38,6 +38,7 @@
   </distributionManagement>
   <properties>
     <assertj-bom.version>3.27.4</assertj-bom.version>
+    <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
     <jacoco-maven-plugin.version>0.8.13</jacoco-maven-plugin.version>
     <jacoco.unit-tests.limit.instruction-ratio>96%</jacoco.unit-tests.limit.instruction-ratio>
     <java.version>21</java.version>
@@ -49,7 +50,6 @@
     <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
     <palantir.version>2.39.0</palantir.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sortpom-maven-plugin.version>4.0.0</sortpom-maven-plugin.version>
@@ -164,9 +164,9 @@
           <version>${maven-gpg-plugin.version}</version>
         </plugin>
         <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>${nexus-staging-maven-plugin.version}</version>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>${central-publishing-maven-plugin.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -291,14 +291,11 @@
             </executions>
           </plugin>
           <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
             <extensions>true</extensions>
             <configuration>
-              <serverId>ossrh</serverId>
-              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-              <autoReleaseAfterClose>true</autoReleaseAfterClose>
-              <stagingProgressTimeoutMinutes>60</stagingProgressTimeoutMinutes>
+              <publishingServerId>central</publishingServerId>
             </configuration>
           </plugin>
         </plugins>
