@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.24.3] - 2025-09-07
+
+### Miscellaneous Tasks
+
+- Upgrade Mockito
+
 ## [0.24.2] - 2025-09-07
 
 ### Bug Fixes
