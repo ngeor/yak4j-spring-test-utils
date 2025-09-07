@@ -26,16 +26,6 @@
     <tag>HEAD</tag>
     <url>https://github.com/ngeor/yak4j-spring-test-utils</url>
   </scm>
-  <distributionManagement>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
   <properties>
     <assertj-bom.version>3.27.4</assertj-bom.version>
     <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
