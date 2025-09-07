@@ -40,6 +40,7 @@
     <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
+    <mockito-core.version>4.11.0</mockito-core.version>
     <palantir.version>2.39.0</palantir.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sortpom-maven-plugin.version>4.0.0</sortpom-maven-plugin.version>
@@ -100,7 +101,7 @@
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
-      <version>4.5.1</version>
+      <version>${mockito-core.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
