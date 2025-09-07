@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.24.4] - 2025-09-07
+
+### Miscellaneous Tasks
+
+- Configure autopublish to Maven Central Repository
+
 ## [0.24.3] - 2025-09-07
 
 ### Miscellaneous Tasks
