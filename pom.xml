@@ -37,24 +37,24 @@
     </snapshotRepository>
   </distributionManagement>
   <properties>
-    <assertj-bom.version>3.27.3</assertj-bom.version>
-    <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
+    <assertj-bom.version>3.27.4</assertj-bom.version>
+    <jacoco-maven-plugin.version>0.8.13</jacoco-maven-plugin.version>
     <jacoco.unit-tests.limit.instruction-ratio>96%</jacoco.unit-tests.limit.instruction-ratio>
     <java.version>21</java.version>
-    <junit.version>5.11.4</junit.version>
-    <maven-deploy-plugin.version>3.1.3</maven-deploy-plugin.version>
-    <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
-    <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
+    <junit.version>5.13.4</junit.version>
+    <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
+    <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
+    <maven-javadoc-plugin.version>3.11.3</maven-javadoc-plugin.version>
     <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-    <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
     <palantir.version>2.39.0</palantir.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sortpom-maven-plugin.version>4.0.0</sortpom-maven-plugin.version>
-    <spotless-maven-plugin.version>2.44.2</spotless-maven-plugin.version>
-    <spring.version>5.3.23</spring.version>
+    <spotless-maven-plugin.version>2.46.1</spotless-maven-plugin.version>
+    <spring.version>5.3.39</spring.version>
   </properties>
   <dependencyManagement>
     <dependencies>
