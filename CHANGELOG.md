@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.24.2] - 2025-09-07
+
+### Bug Fixes
+
+- Trying without distributionManagement
+
 ## [0.24.1] - 2025-09-07
 
 ### Bug Fixes
