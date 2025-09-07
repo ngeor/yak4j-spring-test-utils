@@ -1,35 +1,37 @@
 # Changelog
-
 All notable changes to this project will be documented in this file.
 
-## [0.22.0](https://github.com/ngeor/kamino/compare/libs/yak4j-spring-test-utils/v0.21.2...libs/yak4j-spring-test-utils/v0.22.0) - 2024-02-27
-
-### Fixes
-
-* Upgrading libraries to Java 17
+## [0.24.0] - 2025-09-07
 
 ### Miscellaneous Tasks
 
-* Delete old .github and scripts folders
-* Keeping only root .editorconfig, deleting the rest
-* Keeping only root .gitignore, deleting the rest
-* Upgrade to latest parent pom
-* Upgraded to latest parent pom
-* Use `com.github.ngeor:java` as the parent pom everywhere
-* Switch to snapshot version of parent pom
-* Remove unnecessary mock
+- Upgraded dependencies
 
-### Dependencies
+## [0.23.0] - 2025-02-05
 
-* Upgraded parent pom
-* Upgrade to Spring 5.3.32
+### Features
 
-## [0.21.2] - 2024-01-28
+- Use tag based release workflow
 
 ### Miscellaneous Tasks
 
-* Add 'libs/yak4j-spring-test-utils/' from commit '2fc88efae07f5ccf4657707fd4331a3cb5154631'
-* Adjusted imported code
+- Updated copyright year in LICENSE
+- Updated ${spring.version} from 5.3.13 to 5.3.15
+- Updating parent from 2.1.0 to 2.4.0
+- Updating parent from 2.4.0 to 3.1.1
+- Update dependency org.hamcrest:hamcrest-core to v2
+- Update spring.version to v5.3.16
+- Update spring.version to v5.3.17
+- Update spring.version to v5.3.18
+- Update spring.version to v5.3.19
+- Update spring.version to v5.3.20
+- Fix import order
+- Update dependency com.github.ngeor:java to v3.2.0
+- Update spring.version to v5.3.21
+- Update spring.version to v5.3.22
+- Update dependency com.github.ngeor:java to v3.3.0
+- Update spring.version to v5.3.23
+- Migrated back to own repo
 
 ## [0.21.1] - 2022-01-27
 
