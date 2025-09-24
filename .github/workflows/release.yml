@@ -8,18 +8,26 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    # main repo
+    - uses: actions/checkout@v5
+    # release script
+    - uses: actions/checkout@v5
+      with:
+        repository: ngeor/java
+        # checkout into the scripts path
+        path: scripts
+        # only scripts path
+        sparse-checkout: |
+          scripts
     - uses: actions/setup-java@v4
       with:
         java-version: '21'
         distribution: 'zulu'
         cache: 'maven'
-    # workaround to prime the gpg folders
-    - run: gpg --list-keys
-    - run: gpg --batch --yes --passphrase=${{ secrets.GPG_PASSPHRASE }} --output - scripts/keys.asc | gpg --batch --import
     - run: >-
-        ./scripts/release.py
-        --gpg-key ${{ secrets.GPG_KEY }}
+        ./scripts/scripts/release.py
+        --gpg-key-file ./scripts/scripts/keys.asc
+        --gpg-key-name ${{ secrets.GPG_KEY }}
         --gpg-passphrase ${{ secrets.GPG_PASSPHRASE }}
         --maven-username ${{ secrets.OSSRH_USERNAME }}
         --maven-password ${{ secrets.OSSRH_PASSWORD }}
