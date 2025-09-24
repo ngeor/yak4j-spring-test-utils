@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.ngeor</groupId>
   <artifactId>yak4j-spring-test-utils</artifactId>
-  <version>0.24.5</version>
+  <version>0.24.6-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>yak4j-spring-test-utils</name>
   <description>yak shaving for Java: Testing utilities for Spring</description>
@@ -23,7 +23,7 @@
   <scm>
     <connection>scm:git:https://github.com/ngeor/yak4j-spring-test-utils.git</connection>
     <developerConnection>scm:git:git@github.com:ngeor/yak4j-spring-test-utils.git</developerConnection>
-    <tag>v0.24.5</tag>
+    <tag>HEAD</tag>
     <url>https://github.com/ngeor/yak4j-spring-test-utils</url>
   </scm>
   <properties>
