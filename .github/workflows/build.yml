@@ -12,21 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # main repo
     - uses: actions/checkout@v5
-    # release script
-    - uses: actions/checkout@v5
-      with:
-          repository: ngeor/java
-          # checkout into the scripts path
-          path: scripts
-          # only scripts path
-          sparse-checkout: |
-              scripts
     - uses: actions/setup-java@v4
       with:
         java-version: '21'
         distribution: 'zulu'
         cache: 'maven'
-    - run: find .
     - run: mvn -B -ntp package --file pom.xml

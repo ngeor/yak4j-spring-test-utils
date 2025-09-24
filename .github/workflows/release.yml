@@ -13,21 +13,20 @@ jobs:
     # release script
     - uses: actions/checkout@v5
       with:
-          repository: ngeor/java
-          # checkout into the scripts path
-          path: scripts
-          # only scripts path
-          sparse-checkout: |
-              scripts
+        repository: ngeor/java
+        # checkout into the scripts path
+        path: scripts
+        # only scripts path
+        sparse-checkout: |
+          scripts
     - uses: actions/setup-java@v4
       with:
         java-version: '21'
         distribution: 'zulu'
         cache: 'maven'
-    # workaround to prime the gpg folders
     - run: >-
-        ./scripts/release.py
-        --gpg-key-file ./scripts/keys.asc
+        ./scripts/scripts/release.py
+        --gpg-key-file ./scripts/scripts/keys.asc
         --gpg-key-name ${{ secrets.GPG_KEY }}
         --gpg-passphrase ${{ secrets.GPG_PASSPHRASE }}
         --maven-username ${{ secrets.OSSRH_USERNAME }}
